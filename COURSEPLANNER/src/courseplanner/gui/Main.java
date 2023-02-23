@@ -28,7 +28,6 @@ public static void main(String[] args) {
 			System.out.println("Login failed!\nInvalid username or password");
 		}
 		
-		
 	}
 	
 	else if(choice == 2) {
