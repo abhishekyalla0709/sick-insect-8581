@@ -11,6 +11,10 @@ public interface Batch {
 	public String getCourse_id();
 
 	public void setCourse_id(String course_id);
+	
+	public String getFaculty_id();
+
+	public void setFaculty_id(String faculty_id);
 
 	public int getNumber_of_students();
 
