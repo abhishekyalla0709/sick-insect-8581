@@ -12,7 +12,7 @@ public interface AdminOperations {
 	
 	//list of operations that has to be performed by admin
 	
-	void adminLogin(String username, String password) throws SomethingWentWrong;
+	boolean adminLogin(String username, String password) throws SomethingWentWrong;
 	
 	void createCourse(Course course) throws SomethingWentWrong;
 	

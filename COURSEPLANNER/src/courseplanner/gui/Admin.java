@@ -1,5 +1,9 @@
 package courseplanner.gui;
 
-public class Admin {
+import courseplanner.dao.AdminOperations;
+import courseplanner.dao.AdminOperationsImpl;
 
+public class Admin {
+	int choice;
+	
 }

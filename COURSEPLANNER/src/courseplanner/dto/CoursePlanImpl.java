@@ -1,6 +1,6 @@
 package courseplanner.dto;
 
-public class CoursePlanImpl {
+public class CoursePlanImpl implements CoursePlan {
 		
 	private String plan_id;
 	private String batch_id;

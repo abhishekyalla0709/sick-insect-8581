@@ -6,6 +6,7 @@ public class BatchImpl implements Batch{
 	
 	private String batch_id;
 	private String course_id;
+	private String faculty_id;
 	private int number_of_students;
 	private LocalDate batch_start_date;
 	private int duration;
@@ -14,10 +15,11 @@ public class BatchImpl implements Batch{
 		
 	}
 	
-	public BatchImpl(String batch_id, String course_id, int number_of_students, LocalDate batch_start_date,
+	public BatchImpl(String batch_id, String course_id, String faculty_id, int number_of_students, LocalDate batch_start_date,
 			int duration) {
 		this.batch_id = batch_id;
 		this.course_id = course_id;
+		this.faculty_id = faculty_id;
 		this.number_of_students = number_of_students;
 		this.batch_start_date = batch_start_date;
 		this.duration = duration;
@@ -37,6 +39,14 @@ public class BatchImpl implements Batch{
 
 	public void setCourse_id(String course_id) {
 		this.course_id = course_id;
+	}
+	
+	public String getFaculty_id() {
+		return faculty_id;
+	}
+
+	public void setFaculty_id(String faculty_id) {
+		this.faculty_id = faculty_id;
 	}
 
 	public int getNumber_of_students() {
@@ -58,6 +68,7 @@ public class BatchImpl implements Batch{
 	public int getDuration() {
 		return duration;
 	}
+
 
 	public void setDuration(int duration) {
 		this.duration = duration;
