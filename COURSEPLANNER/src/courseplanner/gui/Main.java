@@ -3,6 +3,10 @@ package courseplanner.gui;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
+import courseplanner.dao.AdminOperations;
+import courseplanner.dao.AdminOperationsImpl;
+import exceptions.SomethingWentWrong;
+
 public class Main {
 public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
@@ -10,23 +14,24 @@ public static void main(String[] args) {
 	System.out.println("Enter 2 to Employee login");
 	System.out.println("Enter 0 to exit");
 	int choice = sc.nextInt();
+	AdminOperations ao = new AdminOperationsImpl();
 	//the moment the choice is 1 user should be able to see all the operations
 	// that can be performed by admin
 	if(choice == 1) {
+		System.out.println("Please login first to access Admin operations");
 		System.out.println("Enter the username of Admin");
 		String username = sc.next();
 		System.out.println("Enter the password");
 		String password = sc.next();
+		try {
+			if(ao.adminLogin(username, password)) {
+				
+			}
+		} catch (SomethingWentWrong e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		ResourceBundle bundle = ResourceBundle.getBundle("adminlogindetails");
-		System.out.println(bundle.getString("username") + " " + bundle.getString("password"));
-		if(username.equals(bundle.getString("username")) && password.equals(bundle.getString("password"))) {
-			System.out.println("login succesfull");
-			//now connect this with the Admin operations
-		}
-		else {
-			System.out.println("Login failed!\nInvalid username or password");
-		}
 		
 	}
 	
