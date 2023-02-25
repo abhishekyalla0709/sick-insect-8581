@@ -82,6 +82,13 @@ public class FacultyImpl implements Faculty{
 	public void setFaculty_password(String faculty_password) {
 		this.faculty_password = faculty_password;
 	}
+
+	@Override
+	public String toString() {
+		return "faculty_id=" + faculty_id + ", faculty_name=" + faculty_name + ", faculty_address="
+				+ faculty_address + ", faculty_mobileno=" + faculty_mobileno + ", faculty_email=" + faculty_email
+				+ ", faculty_username=" + faculty_username + ", faculty_password=" + faculty_password + "\n";
+	}
 	
 	
 	
