@@ -39,7 +39,7 @@ public static void main(String[] args) {
 	}
 	
 	else if(choice == 2) {
-		
+	System.out.println("Operations of Faculty");	
 	}
 	
 	else if(choice == 0) {
