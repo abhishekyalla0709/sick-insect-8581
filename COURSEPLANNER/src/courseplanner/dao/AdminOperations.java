@@ -48,7 +48,7 @@ public interface AdminOperations {
 	
 	List<CoursePlan> viewCoursePlan(String courseplan_id) throws SomethingWentWrong;
 	
-	List<CoursePlan> viewDayWisePlan(String courseplan_id) throws SomethingWentWrong;
+	List<CoursePlan> viewDayWisePlan(String batch_id) throws SomethingWentWrong;
 	
 	List<Batch> generateReportofEveryBatch() throws SomethingWentWrong;
 

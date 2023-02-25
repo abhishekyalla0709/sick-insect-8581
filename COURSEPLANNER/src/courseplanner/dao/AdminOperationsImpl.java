@@ -681,17 +681,17 @@ public class AdminOperationsImpl implements AdminOperations {
 	}
 
 	@Override
-	public List<CoursePlan> viewDayWisePlan(String courseplan_id) throws SomethingWentWrong {
+	public List<CoursePlan> viewDayWisePlan(String batch_id) throws SomethingWentWrong {
 		// TODO Auto-generated method stub
 		List<CoursePlan> list = null;
 		Connection conn = null;
 		try {
 			conn = DBUtils.getConnection();
 			// now make the query
-			String query = "SELECT * from CoursePlan where plan_id = ?";
+			String query = "SELECT * from CoursePlan where batch_id = ?";
 			
 			PreparedStatement ps = conn.prepareStatement(query);
-			ps.setString(1, courseplan_id);
+			ps.setString(1, batch_id);
 			
 			ResultSet rs = ps.executeQuery();
 			list = ListofCoursePlan(rs);
@@ -700,7 +700,7 @@ public class AdminOperationsImpl implements AdminOperations {
 			}
 		}
 		catch (SQLException ex){
-			throw new SomethingWentWrong();
+			throw new SomethingWentWrong("Batch Not Found!");
 		}
 		finally {
 			DBUtils.closeConnection(conn);
