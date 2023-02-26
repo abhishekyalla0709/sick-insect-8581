@@ -60,6 +60,12 @@ public class CoursePlanImpl implements CoursePlan {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
+	@Override
+	public String toString() {
+		return "plan_id=" + plan_id + ", batch_id=" + batch_id + ", daynumber=" + daynumber + ", topic="
+				+ topic + ", status=" + status + "\n";
+	}
 	
 	
 

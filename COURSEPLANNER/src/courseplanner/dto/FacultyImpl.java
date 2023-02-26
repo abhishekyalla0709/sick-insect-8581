@@ -85,9 +85,9 @@ public class FacultyImpl implements Faculty{
 
 	@Override
 	public String toString() {
-		return "faculty_id=" + faculty_id + ", faculty_name=" + faculty_name + ", faculty_address="
-				+ faculty_address + ", faculty_mobileno=" + faculty_mobileno + ", faculty_email=" + faculty_email
-				+ ", faculty_username=" + faculty_username + ", faculty_password=" + faculty_password + "\n";
+		return "faculty_id=" + faculty_id + ", name=" + faculty_name + ", address="
+				+ faculty_address + ", mobileno=" + faculty_mobileno + ", email=" + faculty_email
+				+ ", username=" + faculty_username + ", password=" + faculty_password + "\n";
 	}
 	
 	

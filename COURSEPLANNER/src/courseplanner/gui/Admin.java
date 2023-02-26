@@ -14,19 +14,20 @@ import courseplanner.dto.CoursePlanImpl;
 import courseplanner.dto.FacultyImpl;
 import courseplanner.dto.Faculty;
 import exceptions.SomethingWentWrong;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Admin {
 	
 	public static void main(String[] args) {
-		int choice;
 		Scanner sc = new Scanner(System.in);
 		AdminOperations ao = new AdminOperationsImpl();
 		//the moment the choice is 1 user should be able to see all the operations
 		// that can be performed by admin
-		System.out.println("Enter 1");
-		choice = sc.nextInt();
-		if(choice == 1) {
-			System.out.println("Please login first to access Admin operations");
+		//System.out.println("Enter 1");
+		System.out.println("Please login first to access Admin operations");
+		
+		
 			System.out.println("Enter the username of Admin");
 			String username = sc.next();
 			System.out.println("Enter the password");
@@ -85,15 +86,15 @@ public class Admin {
 							ao.updateCourse(course);
 						}
 						else if(choice2 == 3) {
-							ao.viewAllCourses();
+							System.out.println(ao.viewAllCourses()); 
 						}
 						else if(choice2 == 4) {
 							System.out.println("Enter the course Id to see its details");
 							String c_id = sc.next();
-							ao.viewCourse(c_id);
+							System.out.println(ao.viewCourse(c_id));
 						}
 						else if(choice2 == 0) {
-							System.out.println("Thankyou for visiting our services come agian");
+							System.out.println("Going back to admin operations");
 						}
 					}
 					
@@ -159,15 +160,15 @@ public class Admin {
 							ao.updateFaculty(fac);
 						}
 						else if(choice2 == 3) {
-							ao.viewAllFaculty();
+							System.out.println(ao.viewAllFaculty()); 
 						}
 						else if(choice2 == 4) {
 							System.out.println("Enter the Faculty Id to see their details");
 							String f_id = sc.next();
-							ao.viewFaculty(f_id);
+							System.out.println(ao.viewFaculty(f_id));
 						}
 						else if(choice2 == 0) {
-							System.out.println("Thankyou for visiting our services come agian");
+							System.out.println("Going back to admin operations");
 						}
 					}
 					
@@ -226,15 +227,15 @@ public class Admin {
 							System.out.println("Enter the duratioon of the batch");
 							int dur = sc.nextInt();
 							bat.setDuration(dur);
-							ao.createBatch(bat);
+							ao.updateBatch(bat);
 						}
 						else if(choice2 == 3) {
-							ao.viewAllBatches();
+							System.out.println(ao.viewAllBatches());
 						}
 						else if(choice2 == 4) {
 							System.out.println("Enter the Batch Id to see their details");
 							String b_id = sc.next();
-							ao.viewBatch(b_id);
+							System.out.println(ao.viewBatch(b_id));
 						}
 						else if(choice2 == 5) {
 							System.out.println("Enter the Batch Id to which faculty has to be allocated");
@@ -244,7 +245,7 @@ public class Admin {
 							ao.allocateFacultytoBatch(b_id, f_id);
 						}
 						else if(choice2 == 0) {
-							System.out.println("Thankyou for visiting our services come agian");
+							System.out.println("Going back to admin operations");
 						}
 					}
 					
@@ -272,7 +273,8 @@ public class Admin {
 							String topic = sc.next();
 							cp.setTopic(topic);
 							System.out.println("Enter the status for that day");
-							String status = sc.next();
+							sc.nextLine();
+							String status = sc.nextLine();
 							cp.setStatus(status);
 							ao.createCoursePlan(cp);
 						}
@@ -292,26 +294,30 @@ public class Admin {
 							String topic = sc.next();
 							cp.setTopic(topic);
 							System.out.println("Enter the status for that day");
-							String status = sc.next();
+							sc.nextLine();
+							String status = sc.nextLine();
 							cp.setStatus(status);
 							ao.updateCourselan(cp);
 						}
 						else if(choice2 == 3) {
-							ao.viewAllCoursePlan();
+							System.out.println(ao.viewAllCoursePlan());
 						}
 						else if(choice2 == 4) {
 							System.out.println("Enter the Plan Id to see their details");
 							String cp_id = sc.next();
-							ao.viewCoursePlan(cp_id);
+							System.out.println(ao.viewCoursePlan(cp_id));
 						}
 						else if(choice2 == 5) {
 							System.out.println("Enter the Batch Id to see the plans for that particular batch");
 							String b_id = sc.next();
-							ao.viewDayWisePlan(b_id);
+							System.out.println(ao.viewDayWisePlan(b_id)); 
 						}
 						else if(choice2 == 0) {
-							System.out.println("Thankyou for visiting our services come agian");
+							System.out.println("Going back to admin operations");
 						}
+					}
+					else if(choice1 == 0) {
+						System.out.println("Thankyou for using our services! \n Taking back to main page");
 					}
 					
 					}
@@ -322,7 +328,7 @@ public class Admin {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
+		
 	
 	}
 }

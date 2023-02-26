@@ -49,6 +49,12 @@ public class CourseImpl implements Course {
 	public void setCourse_des(String course_des) {
 		this.course_des = course_des;
 	}
-	
 
+	@Override
+	public String toString() {
+		return "course_id=" + course_id + ", course_name=" + course_name + ", course_fee=" + course_fee
+				+ ", course_des=" + course_des + "\n";
+	}
+	
+	
 }
