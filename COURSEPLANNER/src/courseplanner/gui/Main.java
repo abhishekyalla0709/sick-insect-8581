@@ -14,7 +14,7 @@ public static void main(String[] args) {
 	
 	do {
 		System.out.println("Enter 1 to Admin login");
-		System.out.println("Enter 2 to Employee login");
+		System.out.println("Enter 2 to Faculty login");
 		System.out.println("Enter 0 to exit");
 		choice = sc.nextInt();
 		if(choice == 1) {

@@ -36,7 +36,7 @@ public class Admin {
 				if(ao.adminLogin(username, password)) {
 					int choice1;
 					do {
-					System.out.println("Enter 1 to perform opearions on Course");
+					System.out.println("Enter 1 to perform operations on Course");
 					System.out.println("Enter 2 to perform operations on Faculty");
 					System.out.println("Enter 3 to perform operations on Batch");
 					System.out.println("Enter 4 to perform operations on courseplan");
