@@ -73,6 +73,14 @@ public class BatchImpl implements Batch{
 	public void setDuration(int duration) {
 		this.duration = duration;
 	}
+
+	@Override
+	public String toString() {
+		return "batch_id=" + batch_id + ", course_id=" + course_id + ", faculty_id=" + faculty_id
+				+ ", number_of_students=" + number_of_students + ", batch_start_date=" + batch_start_date
+				+ ", duration=" + duration + "\n";
+	}
+	
 	
 
 }
