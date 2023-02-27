@@ -5,4 +5,5 @@ Course Management System is an application to track and maintain the track of co
 There can be n number of courses and m number of batches running simulataneously.
 This application helps us to track and maintain the status of each and every batch.
 
-<img src="Untitled Drawing">
+![Untitled drawing (1)](https://user-images.githubusercontent.com/112754517/221499389-a19b5a34-0854-4931-9e7e-9a6eecaa2d6e.png)
+
