@@ -59,6 +59,9 @@ public static void main(String[] args) {
 				else if(choice1 == 0) {
 					System.out.println("Taking back to the main page");
 				}
+				else {
+					System.err.println("Choose from one of the above options");
+				}
 			}
 				while(choice1 != 0);
 			}

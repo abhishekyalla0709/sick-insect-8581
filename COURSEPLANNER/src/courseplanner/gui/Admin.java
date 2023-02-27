@@ -96,6 +96,9 @@ public class Admin {
 						else if(choice2 == 0) {
 							System.out.println("Going back to admin operations");
 						}
+						else {
+							System.err.println("Choose from one of the above options");
+						}
 					}
 					
 					else if(choice1 == 2) {
@@ -169,6 +172,9 @@ public class Admin {
 						}
 						else if(choice2 == 0) {
 							System.out.println("Going back to admin operations");
+						}
+						else {
+							System.err.println("Choose from one of the above options");
 						}
 					}
 					
@@ -247,6 +253,9 @@ public class Admin {
 						else if(choice2 == 0) {
 							System.out.println("Going back to admin operations");
 						}
+						else {
+							System.err.println("Choose from one of the above options");
+						}
 					}
 					
 					else if(choice1 == 4) {
@@ -318,6 +327,9 @@ public class Admin {
 					}
 					else if(choice1 == 0) {
 						System.out.println("Thankyou for using our services! \n Taking back to main page");
+					}
+					else {
+						System.err.println("Choose from one of the above options");
 					}
 					
 					}

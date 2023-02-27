@@ -28,7 +28,9 @@ public static void main(String[] args) {
 		else if(choice == 0) {
 			System.out.println("Thank you for choosing our services. Visit again!");
 		}
-		
+		else {
+			System.err.println("Choose from one of the above options");
+		}
 	}
 	
 	while(choice != 0);
