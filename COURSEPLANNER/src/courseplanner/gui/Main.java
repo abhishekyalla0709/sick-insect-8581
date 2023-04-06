@@ -1,5 +1,6 @@
 package courseplanner.gui;
 
+import java.util.InputMismatchException;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
@@ -8,8 +9,9 @@ import courseplanner.dao.AdminOperationsImpl;
 import exceptions.SomethingWentWrong;
 
 public class Main {
-public static void main(String[] args) {
+public static void main(String[] args) throws SomethingWentWrong{
 	Scanner sc = new Scanner(System.in);
+	try {
 	int choice;
 	
 	do {
@@ -34,7 +36,11 @@ public static void main(String[] args) {
 	}
 	
 	while(choice != 0);
-	
+	}
+	catch (InputMismatchException ex) {
+		System.out.println("Enter a valid input");
+		Main.main(args);
+	}
 	sc.close();
 }
 }

@@ -26,7 +26,7 @@ public class AdminOperationsImpl implements AdminOperations {
 	public boolean adminLogin(String username, String password) throws SomethingWentWrong {
 		// TODO Auto-generated method stub
 		ResourceBundle bundle = ResourceBundle.getBundle("adminlogindetails");
-		System.out.println(bundle.getString("username") + " " + bundle.getString("password"));
+		//System.out.println(bundle.getString("username") + " " + bundle.getString("password"));
 		if(username.equals(bundle.getString("username")) && password.equals(bundle.getString("password"))) {
 			System.out.println("login succesfull");
 			//now connect this with the Admin operations
@@ -205,17 +205,16 @@ public class AdminOperationsImpl implements AdminOperations {
 			conn = DBUtils.getConnection();
 			
 			// prepare the query
-			String query = "INSERT INTO Batch (batch_id, course_id, faculty_id, number_of_students, batch_start_date, duration) values (?,?,?,?,?,?)";
+			String query = "INSERT INTO Batch (batch_id, course_id, number_of_students, batch_start_date, duration) values (?,?,?,?,?)";
 			
 			//pass the query
 			PreparedStatement ps = conn.prepareStatement(query);
 			
 			ps.setString(1, batch.getBatch_id());
 			ps.setString(2, batch.getCourse_id());
-			ps.setString(3, batch.getFaculty_id());
-			ps.setInt(4, batch.getNumber_of_students());
-			ps.setDate(5,Date.valueOf(batch.getBatch_start_date()));
-			ps.setInt(6, batch.getDuration());
+			ps.setInt(3, batch.getNumber_of_students());
+			ps.setDate(4,Date.valueOf(batch.getBatch_start_date()));
+			ps.setInt(5, batch.getDuration());
 			
 			r = ps.executeUpdate();
 			if(r > 0) {

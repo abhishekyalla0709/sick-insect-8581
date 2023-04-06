@@ -12,9 +12,9 @@ public class SomethingWentWrong extends Exception{
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public String toString() {
-		return "SomethingWentWrong ";
-	}
+//	@Override
+//	public String toString() {
+//		return "SomethingWentWrong ";
+//	}
 	
 }

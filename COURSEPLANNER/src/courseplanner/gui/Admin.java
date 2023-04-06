@@ -196,14 +196,14 @@ public class Admin {
 							System.out.println("Enter the Course ID");
 							String c_id = sc.next();
 							bat.setCourse_id(c_id);
-							System.out.println("Enter the Faculty ID if yu donot want to add faculty now write null");
-							sc.nextLine();
-							String f_id = sc.nextLine();
-							bat.setFaculty_id(f_id);
+							//System.out.println("Enter the Faculty ID if yu donot want to add faculty now write null");
+							//sc.nextLine();
+							//String f_id = sc.nextLine();
+							//bat.setFaculty_id(f_id);
 							System.out.println("Enter the Number of Students in batch");
 							int students = sc.nextInt();
 							bat.setNumber_of_students(students);
-							System.out.println("Enter the batch start date");
+							System.out.println("Enter the batch start date in yyyy-mm-dd format");
 							String date = sc.next();
 							bat.setBatch_start_date(LocalDate.parse(date));
 							System.out.println("Enter the duratioon of the batch");
@@ -338,7 +338,7 @@ public class Admin {
 				}
 			} catch (SomethingWentWrong e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				System.out.println("Invalid credentials");
 			}
 		
 	
