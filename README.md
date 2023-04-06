@@ -8,7 +8,7 @@ This application helps us to track and maintain the status of each and every bat
 ![Untitled drawing (1)](https://user-images.githubusercontent.com/112754517/221499389-a19b5a34-0854-4931-9e7e-9a6eecaa2d6e.png)
 
 Domain Description: <br>
-In an educational Institute there are several courses running parallel every day. For every course there are several batches at same/different time. Every course has a session wise/day wise schedule. It will be difficult for the Faculty Head to know the status of every batch i.e what is the session taught at each day in a batch. So the Automated Course Monitoring System will keep the records of all the courses,batches,faculties and the daywise update for every batch. It will also help the Faculty Head to maintain the course plan .
+In an educational Institute there are several courses running parallel every day. For every course there are several batches at same/different time. Every batch has a session wise/day wise schedule. It will be difficult for the Faculty Head to know the status of every batch i.e what is the session taught at each day in a batch. So the Automated Course Monitoring System will keep the records of all the courses,batches,faculties and the daywise update for every batch. It will also help the Faculty Head to maintain the course plan.
 
 Types of users:
 <br>
