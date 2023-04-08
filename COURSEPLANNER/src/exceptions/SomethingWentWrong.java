@@ -1,6 +1,6 @@
 package exceptions;
 
-public class SomethingWentWrong extends Exception{
+public class SomethingWentWrong extends RuntimeException{
 
 	public SomethingWentWrong() {
 		super();

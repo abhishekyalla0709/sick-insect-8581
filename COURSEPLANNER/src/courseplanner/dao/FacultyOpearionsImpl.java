@@ -90,7 +90,7 @@ public class FacultyOpearionsImpl implements FacultyOperations {
 			
 			ResultSet rs = ps.executeQuery();
 			list = ListofCoursePlan(rs);
-			if(list == null) {
+			if(list.size() == 0) {
 				throw new SomethingWentWrong("Something went wrong!.\nPlease try again");
 			}
 		}
