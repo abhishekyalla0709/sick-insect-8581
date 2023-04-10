@@ -1,0 +1,86 @@
+Use the following queries to create the schema of the database
+
+create table Course (
+course_id varchar(5) primary key,
+course_name varchar(20) Not Null,
+course_fee double(7,2) default(999.0),
+course_des varchar(50) );
+ 
+desc course; (will result in the below table)
++-------------+-------------+------+-----+---------+-------------------+
+| Field       | Type        | Null | Key | Default | Extra             |
++-------------+-------------+------+-----+---------+-------------------+
+| course_id   | varchar(5)  | NO   | PRI | NULL    |                   |
+| course_name | varchar(20) | NO   |     | NULL    |                   |
+| course_fee  | double(7,2) | YES  |     | 999.0   | DEFAULT_GENERATED |
+| course_des  | varchar(50) | YES  |     | NULL    |                   |
++-------------+-------------+------+-----+---------+-------------------+
+
+create table Faculty (
+faculty_id varchar(5) primary key,
+faculty_name varchar(20) Not Null,
+faculty_address varchar(50) default Null,
+faculty_mobileno varchar(10) Not Null,
+faculty_email varchar(20) Unique Not Null,
+faculty_username varchar(20) Unique Not Null,
+faculty_password varchar(50) Not Null);
+
+desc faculty;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| faculty_id       | varchar(5)  | NO   | PRI | NULL    |       |
+| faculty_name     | varchar(20) | NO   |     | NULL    |       |
+| faculty_address  | varchar(50) | YES  |     | NULL    |       |
+| faculty_mobileno | varchar(10) | YES  |     | NULL    |       |
+| faculty_email    | varchar(20) | NO   | UNI | NULL    |       |
+| faculty_username | varchar(20) | NO   | UNI | NULL    |       |
+| faculty_password | varchar(50) | YES  |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+
+create table Batch (
+batch_id varchar(5) primary key,
+course_id varchar(5),
+CONSTRAINT FK_course_id FOREIGN KEY (course_id)
+    REFERENCES Course(course_id),
+faculty_id varchar(5),
+CONSTRAINT FK_faculty_id FOREIGN KEY (faculty_id)
+    REFERENCES Faculty(faculty_id),
+number_of_students int default(10),
+batch_start_date date,
+duration int default(5) 
+);
+
+desc batch;
++--------------------+------------+------+-----+---------+-------------------+
+| Field              | Type       | Null | Key | Default | Extra             |
++--------------------+------------+------+-----+---------+-------------------+
+| batch_id           | varchar(5) | NO   | PRI | NULL    |                   |
+| course_id          | varchar(5) | YES  | MUL | NULL    |                   |
+| faculty_id         | varchar(5) | YES  | MUL | NULL    | DEFAULT_GENERATED |
+| number_of_students | int        | YES  |     | 10      | DEFAULT_GENERATED |
+| batch_start_date   | date       | YES  |     | NULL    |                   |
+| duration           | int        | YES  |     | 5       | DEFAULT_GENERATED |
++--------------------+------------+------+-----+---------+-------------------+
+
+create table courseplan(
+plan_id varchar(5),
+batch_id varchar(5),
+CONSTRAINT FK_batch_id FOREIGN KEY (batch_id)
+    REFERENCES Batch(batch_id),
+dayNumber int,
+topic varchar(20),
+status varchar(20),
+primary key(plan_id, batch_id)
+);
+
+desc courseplan;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| plan_id   | varchar(5)  | NO   | PRI | NULL    |       |
+| batch_id  | varchar(5)  | NO   | PRI | NULL    |       |
+| dayNumber | int         | NO   | PRI | NULL    |       |
+| topic     | varchar(20) | YES  |     | NULL    |       |
+| status    | varchar(20) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
