@@ -6,10 +6,13 @@ import java.util.Scanner;
 
 import courseplanner.dao.AdminOperations;
 import courseplanner.dao.AdminOperationsImpl;
+import exceptions.BatchException;
+import exceptions.CourseException;
+import exceptions.FacultyException;
 import exceptions.SomethingWentWrong;
 
 public class Main {
-public static void main(String[] args) throws SomethingWentWrong{
+public static void main(String[] args) throws SomethingWentWrong,BatchException,FacultyException{
 	Scanner sc = new Scanner(System.in);
 	try {
 	int choice;
