@@ -7,6 +7,14 @@ This application helps us to track and maintain the status of each and every bat
 
 ![Untitled drawing (1)](https://user-images.githubusercontent.com/112754517/221499389-a19b5a34-0854-4931-9e7e-9a6eecaa2d6e.png)
 
+Setup of project:
+
+1) After cloning the project into local repository change the data base credentials as per your database in the dbdetails.properties file.
+
+2) Before running the application open mysql and run the commands written in the queries.sql to create tables.
+
+3) check with table schema whether all tables are created properly or not and then application is good to go.
+
 Domain Description: <br>
 In an educational Institute there are several courses running parallel every day. For every course there are several batches at same/different time. Every batch has a session wise/day wise schedule. It will be difficult for the Faculty Head to know the status of every batch i.e what is the session taught at each day in a batch. So the Automated Course Monitoring System will keep the records of all the courses,batches,faculties and the daywise update for every batch. It will also help the Faculty Head to maintain the course plan.
 
@@ -26,7 +34,7 @@ Role of Administrator:
 
 • Create, Update, View Batch. A batch is related to a course.
 
-• Create, Update, View Faculty.
+• Create, View Faculty.
 
 • Allocate faculty to a batch.
 
@@ -46,6 +54,8 @@ Role of Faculty:
 • Fill up the day wise planner.
 
 • Update his/her password.
+
+• Updating the details.
 
 Tables:
 <br>
