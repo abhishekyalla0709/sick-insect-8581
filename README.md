@@ -11,7 +11,7 @@ Setup of project:
 
 1) After cloning the project into local repository change the data base credentials as per your database in the dbdetails.properties file.
 
-2) Before running the application open mysql and run the commands written in the queries.sql to create tables.
+2) Before running the application open mysql and run the commands written in the sql_queries.txt to create tables.
 
 3) check with table schema whether all tables are created properly or not and then application is good to go.
 
